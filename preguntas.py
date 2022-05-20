@@ -90,8 +90,8 @@ def pregunta_03():
                 "column_transfomer",
                 make_column_transformer(
                     (
-                        OneHotEncoder(),
-                        ['categorical_column'],
+                        make_column_selector(['Category']),
+                        (OneHotEncoder(sparse=False)),
                     ),
                     remainder='passthrough',
                 ),
