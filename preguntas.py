@@ -91,7 +91,7 @@ def pregunta_03():
                 make_column_transformer(
                     (
                         OneHotEncoder(),
-                        OneHotEncoder(handle_unknown='ignore'),
+                        ['categorical_column'],
                     ),
                     remainder='passthrough',
                 ),
